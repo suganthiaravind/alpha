@@ -24,6 +24,7 @@ pipeline {
                         script {
                             while (BUILD_COMPLETE != true) {
                                 sh '! grep "WARNING" output.log'
+                                sh 'echo END'
                             }
                         }
                     }
